@@ -16,8 +16,6 @@ su -c "psql postgres -c \"GRANT ALL PRIVILEGES ON DATABASE postgres TO ruqqus;\"
 su -c "psql postgres -c \"GRANT ALL ON SCHEMA public TO ruqqus;\"" postgres
 su -c "psql postgres -c \"GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO ruqqus\"" postgres;
 
-#su -c "psql postgres -c \"ALTER USER postgres PASSWORD '$RANDOM_PASSWORD';\"" postgres
-
 echo "Adding a test user"
 su -c "psql postgres -a -f /app/scripts/docker/test_users.sql" postgres
 
