@@ -121,6 +121,16 @@ Run Ruqqus
 `$ gunicorn ruqqus.__main__:app -w 3 -k gevent --worker-connections 6 --preload --max-requests 500 --max-requests-jitter 50`
 
 
+### Docker
+
+Build the docker container
+
+`docker build . -t ruqqus`
+
+Run the container in interactive mode
+`docker run -it -p 8000:8000 ruqqus`
+
+
 ## License
 [MPL-2.0](https://github.com/ruqqus/ruqqus/blob/master/LICENSE)
 
