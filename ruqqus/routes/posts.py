@@ -70,7 +70,6 @@ def post_base36id(base36id, anything=None, v=None):
 @app.route("/submit", methods=["GET"])
 @is_not_banned
 def submit_get(v):
-
     board=request.args.get("guild","general")
     b=get_guild(board, graceful=True)
     if not b:

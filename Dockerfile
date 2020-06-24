@@ -40,4 +40,5 @@ RUN pip3 install -r /tmp/requirements.txt
 
 ADD . /app/
 
+WORKDIR /app
 CMD /app/scripts/docker/start_docker_ruqqus.sh
